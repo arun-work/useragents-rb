@@ -20,7 +20,7 @@ module UserAgents
       @@match_list[send_match_word] ||= list.select{|l| l.include?(send_match_word) }
     end
 
-    def randWithMatchWord(send_match_word)
+    def rand_with_match(send_match_word)
       match_list.sample
     end
 
