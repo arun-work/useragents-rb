@@ -15,6 +15,15 @@ module UserAgents
       list.sample
     end
 
+    def match_list(send_match_word)
+      @@match_list = [] if !@@match_list
+      @@match_list[send_match_word] ||= list.select{|l| l.include?(send_match_word) }
+    end
+
+    def randWithMatchWord(send_match_word)
+      match_list.sample
+    end
+
   end
 
 end
