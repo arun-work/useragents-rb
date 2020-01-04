@@ -16,7 +16,7 @@ module UserAgents
     end
 
     def match_list(send_match_word)
-      send_match_word = send_match_word.downcase
+      send_match_word = send_match_word.to_s.downcase
       @@match_list ||= [] 
       @@match_list[send_match_word] ||= list.select{|l| l.downcase.include?(send_match_word) }
     end
